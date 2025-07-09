@@ -91,8 +91,8 @@ for epoch in range(args.epochs):
 			if(phase=='train'):
 				loss.backward()
 				optimizer.step()
-				for param_group in optimizer.param_groups:
-					print (param_group['lr'])
+				# for param_group in optimizer.param_groups:
+				# 	print (param_group['lr'])
 				# 	if(param.requires_grad):
 				# 		print("Name",name,"Gradient",param.grad)
 
