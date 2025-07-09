@@ -35,9 +35,10 @@ class Model(nn.Module):
         A = torch.tensor(self.graph.A,
                          dtype=torch.float32,
                          requires_grad=False)
+        
         self.register_buffer('A', A)
 
-        # print("Adjacency matrix",self.A.size())
+        print("Adjacency matrix",self.A.size())
 
         # build networks
         spatial_kernel_size = A.size(0)
