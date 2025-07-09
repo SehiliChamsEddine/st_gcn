@@ -45,6 +45,7 @@ class Model(nn.Module):
         temporal_kernel_size = 9
         kernel_size = (temporal_kernel_size, spatial_kernel_size)
         self.data_bn = nn.BatchNorm1d(in_channels * A.size(1))
+        print("expected input_bn  size",in_channels * A.size(1))
         kwargs0 = {k: v for k, v in kwargs.items() if k != 'dropout'}
 
         self.st_gcn_networks = nn.ModuleList((
