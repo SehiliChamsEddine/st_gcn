@@ -36,7 +36,7 @@ loader = {'train':DataLoader(dataset=train_feeder,batch_size=args.batch_size,shu
 	      'val': DataLoader(dataset=val_feeder,batch_size=args.batch_size,shuffle=False,num_workers=4*2)}
 
 
-model = Model(3,60,graph_args=['ntu-rgb+d','spatial'])
+model = Model(2,8,graph_args=['custom17','spatial'])
 
 if(torch.cuda.device_count()>1):
 	print("Number of gpus",torch.cuda.device_count())
