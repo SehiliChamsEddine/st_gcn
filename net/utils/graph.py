@@ -23,7 +23,7 @@ class Graph():
 
     """
     def __init__(self,
-                 layout='ntu-rgb+d',
+                 layout='custom17',
                  strategy='spatial',
                  max_hop=1,
                  dilation=1):
